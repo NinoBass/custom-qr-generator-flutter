@@ -22,21 +22,15 @@ class MyApp extends StatelessWidget {
             painter: QrPainter(
                 data: 'https://youtube.com',
                 options: const QrOptions(
+                    ecl: ErrorCorrectionLevel.L,
                     shapes: QrShapes(
                         darkPixel: QrPixelShapeRoundCorners(cornerFraction: .5),
-                        frame:  QrFrameShapeRoundCorners(cornerFraction: .25),
-                        ball: QrBallShapeRoundCorners(cornerFraction: .25)
-                    ),
+                        frame: QrFrameShapeRoundCorners(cornerFraction: .25),
+                        ball: QrBallShapeRoundCorners(cornerFraction: .25)),
                     colors: QrColors(
                         dark: QrColorLinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 255, 0, 0),
-                              Color.fromARGB(255, 0, 0, 255)
-                            ],
-                            orientation: GradientOrientation.leftDiagonal
-                        )
-                    )
-                )),
+                            colors: [Color.fromARGB(255, 255, 0, 0), Color.fromARGB(255, 0, 0, 255)],
+                            orientation: GradientOrientation.leftDiagonal)))),
             size: const Size(350, 350),
           ),
         ),

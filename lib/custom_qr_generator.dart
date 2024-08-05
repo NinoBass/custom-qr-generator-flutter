@@ -9,3 +9,4 @@ export 'options/shapes.dart';
 export 'neighbors.dart';
 export 'util.dart';
 export 'qr_painter.dart';
+export 'package:zxing_lib/qrcode.dart';
